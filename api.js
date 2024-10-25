@@ -6,6 +6,11 @@ const port = 3000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+app.use(cors({
+    origin: true, // Allows requests from any origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, // Allows cookies if needed
+}));
 
 // Basic route
 app.get('/', (req, res) => {
@@ -16,3 +21,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
