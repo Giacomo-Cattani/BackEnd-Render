@@ -5,6 +5,7 @@ app.use(cors());
 const port = 3000;
 
 // Middleware to parse JSON bodies
+//test
 app.use(express.json());
 app.use(cors({
     origin: true, // Allows requests from any origin
